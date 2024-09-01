@@ -10,18 +10,16 @@
     --background-color: #f0f0f0;
     --text-color: #333;
     --link-color: #0066cc;
-    --button-background: #0066cc;
-    --button-text-color: #fff;
-    --button-hover-background: #004d99;
+    --icon-light: #000;
+    --icon-dark: #fff;
 }
 
 body.dark-mode {
     --background-color: #121212;
     --text-color: #f0f0f0;
     --link-color: #1e90ff;
-    --button-background: #1e90ff;
-    --button-text-color: #000;
-    --button-hover-background: #005e80;
+    --icon-light: #fff;
+    --icon-dark: #000;
 }
 
 /* Apply colors */
@@ -53,16 +51,27 @@ h1 {
 
 .contact-links {
     margin-top: 20px;
+    display: flex;
+    gap: 20px; /* Spacing between icons */
 }
 
 .contact-links a {
-    margin: 0 10px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--link-color);
 }
 
-.contact-links img {
-    width: 40px; /* Icon size */
-    height: 40px;
+.contact-links .icon {
+    width: 24px; /* Icon size */
+    height: 24px;
+    margin-right: 8px; /* Space between icon and text */
+    fill: var(--icon-dark); /* Color for light mode */
+    transition: fill 0.3s;
+}
+
+body.dark-mode .contact-links .icon {
+    fill: var(--icon-light); /* Color for dark mode */
 }
 
 /* Dark Mode Toggle Button */
@@ -81,6 +90,7 @@ h1 {
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    z-index: 1000;
 }
 
 .dark-mode-button:hover {
@@ -163,9 +173,9 @@ h1 {
         font-size: 2rem; /* Adjust size for mobile */
     }
 
-    .contact-links img {
-        width: 30px; /* Smaller icons for mobile */
-        height: 30px;
+    .contact-links .icon {
+        width: 20px; /* Smaller icons for mobile */
+        height: 20px;
     }
 
     .dark-mode-button {
