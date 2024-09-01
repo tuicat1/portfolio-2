@@ -1,0 +1,182 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define CSS variables for colors */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --link-color: #0066cc;
+    --button-background: #0066cc;
+    --button-text-color: #fff;
+    --button-hover-background: #004d99;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #f0f0f0;
+    --link-color: #1e90ff;
+    --button-background: #1e90ff;
+    --button-text-color: #000;
+    --button-hover-background: #005e80;
+}
+
+/* Apply colors */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem; /* Adjust size for desktop */
+}
+
+.contact-links {
+    margin-top: 20px;
+}
+
+.contact-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.contact-links img {
+    width: 40px; /* Icon size */
+    height: 40px;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--background-color); /* Same as the background color */
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%; /* Circular button */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+.sun-icon, .moon-icon {
+    font-size: 1.5rem; /* Adjust for the icon size */
+}
+
+/* Scroll Down Button */
+.scroll-down-button {
+    position: absolute;
+    bottom: 30px;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-down-button:hover {
+    background-color: var(--button-hover-background);
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* My Journey Section */
+.my-journey {
+    padding: 50px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.my-journey h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.project {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--background-color);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-dates {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.project-blurb {
+    margin-bottom: 10px;
+}
+
+.project-skills {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Adjust size for mobile */
+    }
+
+    .contact-links img {
+        width: 30px; /* Smaller icons for mobile */
+        height: 30px;
+    }
+
+    .dark-mode-button {
+        top: 10px;
+        left: 10px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .scroll-down-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

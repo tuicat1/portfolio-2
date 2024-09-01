@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="dark-mode-button">
+        <span id="dark-mode-icon" class="sun-icon">☀️</span>
+    </button>
+
+    <div class="landing-page">
+        <div class="content">
+            <h1>Your Name</h1>
+            <div class="contact-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="mailto:your.email@example.com"><img src="email-icon.png" alt="Email"></a>
+                <a href="https://github.com/yourusername" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <!-- Scroll Down Button -->
+        <button class="scroll-down-button" onclick="scrollToMyJourney()">See My Journey</button>
+    </div>
+
+    <div class="my-journey">
+        <h2>My Journey</h2>
+        <div class="project">
+            <h3 class="project-title">UniMaps</h3>
+            <p class="project-dates">January 2023 - March 2023</p>
+            <p class="project-blurb">A brief description of the project. This project involved various tasks and challenges that were overcome with innovative solutions.</p>
+            <p class="project-skills">Skills Used: Project Management, Leadership, Teamwork, Conflict Resolution, UI/UX Design, Frontend Development, Client Interaction, Communication, Stakeholder Management</p>
+            <div class="project-media">
+                <img src="project1-image.png" alt="Project 1">
+                <!-- or use a GIF -->
+                <!-- <img src="project1-animation.gif" alt="Project 1 Animation"> -->
+            </div>
+        </div>
+        <!-- Repeat project divs as needed -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
