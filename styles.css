@@ -66,7 +66,7 @@ h1 {
     width: 24px; /* Icon size */
     height: 24px;
     margin-right: 8px; /* Space between icon and text */
-    fill: var(--icon-dark); /* Color for light mode */
+    fill: var(--icon-light); /* Color for light mode */
     transition: fill 0.3s;
 }
 
