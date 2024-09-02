@@ -126,6 +126,7 @@ body.dark-mode .contact-links .icon {
     padding: 50px 20px;
     background-color: var(--background-color);
     color: var(--text-color);
+    position: relative;
 }
 
 .my-journey h2 {
@@ -134,12 +135,61 @@ body.dark-mode .contact-links .icon {
     font-size: 2rem;
 }
 
-.project {
-    margin-bottom: 40px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+/* My Journey Section */
+.my-journey {
+    padding: 50px 20px;
     background-color: var(--background-color);
+    color: var(--text-color);
+    position: relative;
+}
+
+.my-journey h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 50px; /* To make space for the timeline */
+    margin-top: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+
+.timeline-branch {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--text-color);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 9px; /* Adjust the position to center it on the line */
+    top: 50%; /* Center the dot vertically in its container */
+    width: 14px; /* Outer width of the dot */
+    height: 14px; /* Outer height of the dot */
+    background-color: var(--background-color); /* Background color to match the surrounding area */
+    border: 2px solid var(--text-color); /* Outer border to create the doughnut effect */
+    border-radius: 50%; /* Make it circular */
+    transform: translateY(-50%); /* Correctly align the dot vertically */
+    z-index: 1;
+}
+
+
+.timeline-content {
+    margin-left: 30px;
+    border: 1px solid var(--text-color);
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .project-title {
@@ -165,7 +215,32 @@ body.dark-mode .contact-links .icon {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    margin-top: 10px;
 }
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .my-journey {
+        padding: 30px 10px;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline-branch {
+        left: 10px;
+    }
+
+    .timeline-dot {
+        left: 3px;
+    }
+
+    .timeline-content {
+        margin-left: 20px;
+    }
+}
+
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
