@@ -149,51 +149,65 @@ body.dark-mode .contact-links .icon {
     font-size: 2rem;
 }
 
-/* Timeline Styles */
+/* Timeline container */
+/* Default styles for larger screens */
+/* Default styles for larger screens */
 .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
     position: relative;
-    padding-left: 50px; /* To make space for the timeline */
+    padding-left: 50px; /* Space for the timeline line */
     margin-top: 20px;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 50px;
-    padding-left: 30px;
+    width: calc(50% - 30px); /* Reduce width to ensure fitting */
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px; /* Add margin between items */
+}
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-start; /* Left side */
+    text-align: right; /* Right align text */
+    margin-right: 0; /* Remove extra margin */
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end; /* Right side */
+    text-align: left; /* Left align text */
+    margin-left: 0; /* Remove extra margin */
 }
 
 .timeline-branch {
     position: absolute;
-    left: 15px;
+    left: 50%;
     top: 0;
     width: 2px;
     height: 100%;
     background-color: var(--text-color);
-}
-
-.timeline-item:not(:last-child) .timeline-branch {
-    height: 200%; /* Extend to the bottom of the parent */
+    transform: translateX(-50%);
 }
 
 .timeline-dot {
     position: absolute;
-    left: 9px; /* Adjust the position to center it on the line */
-    top: 50%; /* Center the dot vertically in its container */
-    width: 14px; /* Outer width of the dot */
-    height: 14px; /* Outer height of the dot */
-    background-color: var(--background-color); /* Background color to match the surrounding area */
-    border: 2px solid var(--text-color); /* Outer border to create the doughnut effect */
-    border-radius: 50%; /* Make it circular */
-    transform: translateY(-50%); /* Correctly align the dot vertically */
-    z-index: 1;
+    left: 50%;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    transform: translateX(-50%);
 }
 
-
 .timeline-content {
-    margin-left: 30px;
     border: 1px solid var(--text-color);
     padding: 15px;
     border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .project-title {
@@ -222,28 +236,51 @@ body.dark-mode .contact-links .icon {
     margin-top: 10px;
 }
 
-/* Responsive adjustments for mobile devices */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .my-journey {
-        padding: 30px 10px;
+    .timeline {
+        padding-left: 0; /* Remove extra padding */
+        align-items: stretch; /* Make items stretch across full width */
     }
 
-    .timeline {
-        padding-left: 30px;
+    .timeline-item {
+        width: 100%; /* Full width for stacked items */
+        margin-bottom: 20px; /* Space between items */
+        text-align: left; /* Left align text */
+        padding-left: 15px; /* Padding for mobile */
+        padding-right: 15px;
+    }
+
+    .timeline-item:nth-child(odd) {
+        /* Ensure the item is left-aligned on mobile */
+        align-self: stretch;
+        margin-right: 0; /* Remove extra margin */
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(even) {
+        /* Ensure the item is left-aligned on mobile */
+        align-self: stretch;
+        margin-left: 0; /* Remove extra margin */
+        text-align: left;
     }
 
     .timeline-branch {
-        left: 10px;
+        display: none; /* Hide branch line on mobile */
     }
 
     .timeline-dot {
-        left: 3px;
+        left: 15px; /* Adjust position of the dot */
+        transform: none;
     }
 
     .timeline-content {
-        margin-left: 20px;
+        margin-left: 0;
+        margin-right: 0;
     }
+    
 }
+
 
 
 /* Responsive adjustments for mobile devices */

@@ -31,3 +31,4 @@ function scrollToMyJourney() {
     const journeySection = document.querySelector('.my-journey');
     journeySection.scrollIntoView({ behavior: 'smooth' });
 }
+
