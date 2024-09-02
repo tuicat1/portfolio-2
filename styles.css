@@ -171,6 +171,10 @@ body.dark-mode .contact-links .icon {
     background-color: var(--text-color);
 }
 
+.timeline-item:not(:last-child) .timeline-branch {
+    height: 200%; /* Extend to the bottom of the parent */
+}
+
 .timeline-dot {
     position: absolute;
     left: 9px; /* Adjust the position to center it on the line */
