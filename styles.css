@@ -135,56 +135,28 @@ body.dark-mode .contact-links .icon {
     font-size: 2rem;
 }
 
-/* My Journey Section */
-.my-journey {
-    padding: 50px 20px;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    position: relative;
+.project-blurb {
+    border-bottom: 1px solid var(--text-color); /* Adjust color and thickness as needed */
+    padding-bottom: 10px; /* Space between the blurb and the line */
+    margin-bottom: 10px; /* Space between the line and the skills section */
 }
 
-.my-journey h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
 
 /* Timeline container */
-/* Default styles for larger screens */
-/* Default styles for larger screens */
 .timeline {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
     position: relative;
-    padding-left: 50px; /* Space for the timeline line */
-    margin-top: 20px;
+    margin: 0 auto; /* Center the timeline container */
+    padding: 0 20px; /* Add some padding for larger screens */
+    width: 100%; /* Full width */
 }
 
-.timeline-item {
-    position: relative;
-    width: calc(50% - 30px); /* Reduce width to ensure fitting */
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: 20px; /* Add margin between items */
-}
-
-.timeline-item:nth-child(odd) {
-    align-self: flex-start; /* Left side */
-    text-align: right; /* Right align text */
-    margin-right: 0; /* Remove extra margin */
-}
-
-.timeline-item:nth-child(even) {
-    align-self: flex-end; /* Right side */
-    text-align: left; /* Left align text */
-    margin-left: 0; /* Remove extra margin */
-}
-
+/* Timeline branch and dot */
 .timeline-branch {
     position: absolute;
-    left: 50%;
     top: 0;
+    left: 50%; /* Center the branch */
     width: 2px;
     height: 100%;
     background-color: var(--text-color);
@@ -193,13 +165,34 @@ body.dark-mode .contact-links .icon {
 
 .timeline-dot {
     position: absolute;
-    left: 50%;
-    top: 0;
+    left: 50%; /* Center the dot */
     width: 14px;
     height: 14px;
     background-color: var(--text-color);
     border-radius: 50%;
     transform: translateX(-50%);
+}
+
+/* Timeline items */
+.timeline-item {
+    position: relative;
+    width: calc(50% - 30px); /* Adjust width to fit between items */
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: -50px;
+}
+
+.timeline-item:nth-child(odd)  {
+    align-self: flex-start; /* Left side */
+    text-align: right; /* Right align text */
+    margin-right: 60px; /* Space for the timeline */
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end; /* Right side */
+    text-align: left; /* Left align text */
+    margin-left: 60px; /* Space for the timeline */
+
 }
 
 .timeline-content {
@@ -210,99 +203,37 @@ body.dark-mode .contact-links .icon {
     color: var(--text-color);
 }
 
-.project-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.project-dates {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.project-blurb {
-    margin-bottom: 10px;
-}
-
-.project-skills {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.project-media img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .timeline {
-        padding-left: 0; /* Remove extra padding */
-        align-items: stretch; /* Make items stretch across full width */
-    }
-
-    .timeline-item {
-        width: 100%; /* Full width for stacked items */
-        margin-bottom: 20px; /* Space between items */
-        text-align: left; /* Left align text */
-        padding-left: 15px; /* Padding for mobile */
-        padding-right: 15px;
-    }
-
-    .timeline-item:nth-child(odd) {
-        /* Ensure the item is left-aligned on mobile */
-        align-self: stretch;
-        margin-right: 0; /* Remove extra margin */
-        text-align: left;
-    }
-
-    .timeline-item:nth-child(even) {
-        /* Ensure the item is left-aligned on mobile */
-        align-self: stretch;
-        margin-left: 0; /* Remove extra margin */
-        text-align: left;
+        padding: 0; /* Remove extra padding */
     }
 
     .timeline-branch {
-        display: none; /* Hide branch line on mobile */
+        display: none; /* Hide the branch line on mobile */
+    }
+
+    .timeline-item {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 20px; /* Space between items */
+        text-align: left; /* Left align text */
+        padding: 15px; /* Padding for mobile */
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        align-self: stretch; /* Stretch to full width */
+        margin: 0; /* Remove side margins */
+        text-align: left;
     }
 
     .timeline-dot {
-        left: 15px; /* Adjust position of the dot */
+        left: 15px; /* Adjust position of the dot for mobile */
         transform: none;
     }
 
     .timeline-content {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-}
-
-
-
-/* Responsive adjustments for mobile devices */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* Adjust size for mobile */
-    }
-
-    .contact-links .icon {
-        width: 20px; /* Smaller icons for mobile */
-        height: 20px;
-    }
-
-    .dark-mode-button {
-        top: 10px;
-        left: 10px;
-        width: 35px;
-        height: 35px;
-    }
-
-    .scroll-down-button {
-        padding: 8px 16px;
-        font-size: 0.9rem;
+        margin: 0; /* Remove margin for mobile */
     }
 }
