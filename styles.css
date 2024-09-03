@@ -217,6 +217,16 @@ video {
     color: var(--text-color);
 }
 
+.timeline-item {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Start slightly below the final position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.timeline-item.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to the final position */
+}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {

@@ -32,3 +32,21 @@ function scrollToMyJourney() {
     journeySection.scrollIntoView({ behavior: 'smooth' });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once the animation has played
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the item is visible
+    });
+
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+});
