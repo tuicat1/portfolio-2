@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Stop observing once the animation has played
+            } else {
+                entry.target.classList.remove('visible'); // Remove class when out of view
             }
         });
     }, {
