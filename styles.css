@@ -24,6 +24,7 @@ body.dark-mode {
 
 /* Apply colors */
 body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
@@ -187,6 +188,8 @@ video {
     transform: translateX(-50%);
 }
 
+
+
 /* Timeline items */
 .timeline-item {
     position: relative;
@@ -216,6 +219,14 @@ video {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+.timeline-content h3 {
+    font-size: 1.5rem; /* Larger title */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 10px; /* Space below the title */
+ 
+}
+
 
 .timeline-item {
     opacity: 0; /* Initially hidden */
