@@ -1,274 +1,269 @@
 /* Basic reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Define CSS variables for colors */
 :root {
-    --background-color: #f0f0f0;
-    --text-color: #333;
-    --link-color: #0066cc;
-    --icon-light: #000;
-    --icon-dark: #fff;
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --link-color: #0066cc;
+  --icon-light: #000;
+  --icon-dark: #fff;
 }
 
 body.dark-mode {
-    --background-color: #121212;
-    --text-color: #f0f0f0;
-    --link-color: #1e90ff;
-    --icon-light: #fff;
-    --icon-dark: #000;
+  --background-color: #121212;
+  --text-color: #f0f0f0;
+  --link-color: #1e90ff;
+  --icon-light: #fff;
+  --icon-dark: #000;
 }
 
 /* Apply colors */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full viewport height */
-    text-align: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  position: relative;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    font-size: 3rem; /* Adjust size for desktop */
+  font-size: 3rem; /* Adjust size for desktop */
 }
 
 .contact-links {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px; /* Spacing between icons */
+  margin-top: 20px;
+  display: flex;
+  gap: 20px; /* Spacing between icons */
 }
 
 .contact-links a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--link-color);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--link-color);
 }
 
 .contact-links .icon {
-    width: 24px; /* Icon size */
-    height: 24px;
-    margin-right: 8px; /* Space between icon and text */
-    fill: var(--icon-light); /* Color for light mode */
-    transition: fill 0.3s;
+  width: 24px; /* Icon size */
+  height: 24px;
+  margin-right: 8px; /* Space between icon and text */
+  fill: var(--icon-light); /* Color for light mode */
+  transition: fill 0.3s;
 }
 
 body.dark-mode .contact-links .icon {
-    fill: var(--icon-light); /* Color for dark mode */
+  fill: var(--icon-light); /* Color for dark mode */
 }
 
 /* Dark Mode Toggle Button */
 .dark-mode-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: var(--background-color); /* Same as the background color */
-    color: var(--text-color);
-    border: none;
-    border-radius: 50%; /* Circular button */
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    z-index: 1000;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--background-color); /* Same as the background color */
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%; /* Circular button */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1000;
 }
 
 .dark-mode-button:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 
-.sun-icon, .moon-icon {
-    font-size: 1.5rem; /* Adjust for the icon size */
+.sun-icon,
+.moon-icon {
+  font-size: 1.5rem; /* Adjust for the icon size */
 }
 
 /* Scroll Down Button */
 .scroll-down-button {
-    position: absolute;
-    bottom: 30px;
-    background-color: var(--button-background);
-    color: var(--button-text-color);
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+  position: absolute;
+  bottom: 30px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 img {
-    width: 250px;  /* Set your desired width */
-    height: 200px; /* Set your desired height */
-    object-fit: cover; /* Ensure images maintain aspect ratio while covering the set size */
-    border-radius: 8px; /* Optional: adds rounded corners */
+  width: 250px; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  object-fit: cover; /* Ensure images maintain aspect ratio while covering the set size */
+  border-radius: 8px; /* Optional: adds rounded corners */
 }
 
 video {
-    width: 250px;  /* Set your desired width */
-    height: 200px; /* Set your desired height */
-    object-fit: cover; /* Ensures video covers the set size while maintaining aspect ratio */
-    border-radius: 8px; /* Optional: adds rounded corners */
+  width: 250px; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  object-fit: cover; /* Ensures video covers the set size while maintaining aspect ratio */
+  border-radius: 8px; /* Optional: adds rounded corners */
 }
 
 .scroll-down-button:hover {
-    background-color: var(--button-hover-background);
-    transform: translateY(-5px); /* Subtle lift effect */
+  background-color: var(--button-hover-background);
+  transform: translateY(-5px); /* Subtle lift effect */
 }
 
 /* My Journey Section */
 .my-journey {
-    padding: 50px 20px;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    position: relative;
+  padding: 50px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
 }
 
 .my-journey h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
 .project-blurb {
-    border-bottom: 1px solid var(--text-color); /* Adjust color and thickness as needed */
-    padding-bottom: 10px; /* Space between the blurb and the line */
-    margin-bottom: 10px; /* Space between the line and the skills section */
+  border-bottom: 1px solid var(--text-color); /* Adjust color and thickness as needed */
+  padding-bottom: 10px; /* Space between the blurb and the line */
+  margin-bottom: 10px; /* Space between the line and the skills section */
 }
-
 
 /* Timeline container */
 .timeline {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 0 auto; /* Center the timeline container */
-    padding: 0 20px; /* Add some padding for larger screens */
-    width: 100%; /* Full width */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto; /* Center the timeline container */
+  padding: 0 20px; /* Add some padding for larger screens */
+  width: 100%; /* Full width */
 }
 
 /* Timeline branch and dot */
 .timeline-branch {
-    position: absolute;
-    top: 0;
-    left: 50%; /* Center the branch */
-    width: 2px;
-    height: 100%;
-    background-color: var(--text-color);
-    transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  left: 50%; /* Center the branch */
+  width: 2px;
+  height: 100%;
+  background-color: var(--text-color);
+  transform: translateX(-50%);
 }
 
 .timeline-dot {
-    position: absolute;
-    left: 50%; /* Center the dot */
-    width: 14px;
-    height: 14px;
-    background-color: var(--text-color);
-    border-radius: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%; /* Center the dot */
+  width: 14px;
+  height: 14px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
 }
-
-
 
 /* Timeline items */
 .timeline-item {
-    position: relative;
-    width: calc(50% - 30px); /* Adjust width to fit between items */
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: -50px;
+  position: relative;
+  width: calc(50% - 30px); /* Adjust width to fit between items */
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: -50px;
 }
 
-.timeline-item:nth-child(odd)  {
-    align-self: flex-start; /* Left side */
-    text-align: right; /* Right align text */
-    margin-right: 60px; /* Space for the timeline */
+.timeline-item:nth-child(odd) {
+  align-self: flex-start; /* Left side */
+  text-align: right; /* Right align text */
+  margin-right: 60px; /* Space for the timeline */
 }
 
 .timeline-item:nth-child(even) {
-    align-self: flex-end; /* Right side */
-    text-align: left; /* Left align text */
-    margin-left: 60px; /* Space for the timeline */
-
+  align-self: flex-end; /* Right side */
+  text-align: left; /* Left align text */
+  margin-left: 60px; /* Space for the timeline */
 }
 
 .timeline-content {
-    border: 1px solid var(--text-color);
-    padding: 15px;
-    border-radius: 8px;
-    background-color: var(--background-color);
-    color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .timeline-content h3 {
-    font-size: 1.5rem; /* Larger title */
-    font-weight: bold; /* Bold title */
-    margin-bottom: 10px; /* Space below the title */
- 
+  font-size: 1.5rem; /* Larger title */
+  font-weight: bold; /* Bold title */
+  margin-bottom: 10px; /* Space below the title */
 }
 
-
 .timeline-item {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(30px); /* Start slightly below the final position */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Start slightly below the final position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
 }
 
 .timeline-item.visible {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to the final position */
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to the final position */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .timeline {
-        padding: 0; /* Remove extra padding */
-    }
+  .timeline {
+    padding: 0; /* Remove extra padding */
+  }
 
-    .timeline-branch {
-        display: none; /* Hide the branch line on mobile */
-    }
+  .timeline-branch {
+    display: none; /* Hide the branch line on mobile */
+  }
 
-    .timeline-item {
-        width: 100%; /* Full width for mobile */
-        margin-bottom: 20px; /* Space between items */
-        text-align: left; /* Left align text */
-        padding: 15px; /* Padding for mobile */
-    }
+  .timeline-item {
+    width: 100%; /* Full width for mobile */
+    margin-bottom: 20px; /* Space between items */
+    text-align: left; /* Left align text */
+    padding: 15px; /* Padding for mobile */
+  }
 
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        align-self: stretch; /* Stretch to full width */
-        margin: 0; /* Remove side margins */
-        text-align: left;
-    }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    align-self: stretch; /* Stretch to full width */
+    margin: 0; /* Remove side margins */
+    text-align: left;
+  }
 
-    .timeline-dot {
-        left: 15px; /* Adjust position of the dot for mobile */
-        transform: none;
-    }
+  .timeline-dot {
+    left: 15px; /* Adjust position of the dot for mobile */
+    transform: none;
+  }
 
-    .timeline-content {
-        margin: 0; /* Remove margin for mobile */
-    }
+  .timeline-content {
+    margin: 0; /* Remove margin for mobile */
+  }
 }
