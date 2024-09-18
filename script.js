@@ -54,3 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(item);
   });
 });
+
+let text = document.querySelector(".multiText");
+
+let writeText = () => {
+  setTimeout(() => {
+    text.textContent = "Web Developer";
+  }, 500);
+  setTimeout(() => {
+    text.textContent = "Front End Developer";
+  }, 4500);
+  setTimeout(() => {
+    text.textContent = "Back End Developer";
+  }, 8500);
+};
+
+writeText();
+
+setInterval(writeText, 12000);
