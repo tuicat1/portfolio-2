@@ -1,11 +1,10 @@
-/* Basic reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Define CSS variables for colors */
+
 :root {
   --background-color: #f0f0f0;
   --text-color: #333;
@@ -22,7 +21,6 @@ body.dark-mode {
   --icon-dark: #000;
 }
 
-/* Apply colors */
 body {
   font-family: "SUSE", sans-serif;
   background-color: var(--background-color);
@@ -35,7 +33,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   text-align: center;
   position: relative;
 }
@@ -47,7 +45,7 @@ body {
 }
 
 h1 {
-  font-size: 3rem; /* Adjust size for desktop */
+  font-size: 3rem;
 }
 
 .landing-page .content h3 span{
@@ -79,7 +77,7 @@ h1 {
 .contact-links {
   margin-top: 20px;
   display: flex;
-  gap: 20px; /* Spacing between icons */
+  gap: 20px; 
 }
 
 .contact-links a {
@@ -90,9 +88,9 @@ h1 {
 }
 
 .contact-links .icon {
-  width: 24px; /* Icon size */
+  width: 24px; 
   height: 24px;
-  margin-right: 8px; /* Space between icon and text */
+  margin-right: 8px; 
   fill: var(--icon-light); /* Color for light mode */
   transition: fill 0.3s;
 }
@@ -106,7 +104,7 @@ body.dark-mode .contact-links .icon {
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: var(--background-color); /* Same as the background color */
+  background-color: var(--background-color); 
   color: var(--text-color);
   border: none;
   border-radius: 50%; /* Circular button */
@@ -127,10 +125,10 @@ body.dark-mode .contact-links .icon {
 
 .sun-icon,
 .moon-icon {
-  font-size: 1.5rem; /* Adjust for the icon size */
+  font-size: 1.5rem; 
 }
 
-/* Scroll Down Button */
+
 .scroll-down-button {
   position: absolute;
   bottom: 30px;
@@ -145,25 +143,25 @@ body.dark-mode .contact-links .icon {
 }
 
 img {
-  width: 250px; /* Set your desired width */
-  height: 200px; /* Set your desired height */
-  object-fit: cover; /* Ensure images maintain aspect ratio while covering the set size */
-  border-radius: 8px; /* Optional: adds rounded corners */
+  width: 250px; 
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px;
 }
 
 video {
-  width: 250px; /* Set your desired width */
-  height: 200px; /* Set your desired height */
-  object-fit: cover; /* Ensures video covers the set size while maintaining aspect ratio */
-  border-radius: 8px; /* Optional: adds rounded corners */
+  width: 250px; 
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .scroll-down-button:hover {
   background-color: var(--button-hover-background);
-  transform: translateY(-5px); /* Subtle lift effect */
+  transform: translateY(-5px); 
 }
 
-/* My Journey Section */
+
 .my-journey {
   padding: 50px 20px;
   background-color: var(--background-color);
@@ -178,26 +176,26 @@ video {
 }
 
 .project-blurb {
-  border-bottom: 1px solid var(--text-color); /* Adjust color and thickness as needed */
-  padding-bottom: 10px; /* Space between the blurb and the line */
-  margin-bottom: 10px; /* Space between the line and the skills section */
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 10px; 
+  margin-bottom: 10px; 
 }
 
-/* Timeline container */
+
 .timeline {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 auto; /* Center the timeline container */
-  padding: 0 20px; /* Add some padding for larger screens */
-  width: 100%; /* Full width */
+  margin: 0 auto; 
+  padding: 0 20px; 
+  width: 100%; 
 }
 
-/* Timeline branch and dot */
+
 .timeline-branch {
   position: absolute;
   top: 0;
-  left: 50%; /* Center the branch */
+  left: 50%; 
   width: 2px;
   height: 100%;
   background-color: var(--text-color);
@@ -206,7 +204,7 @@ video {
 
 .timeline-dot {
   position: absolute;
-  left: 50%; /* Center the dot */
+  left: 50%; 
   width: 14px;
   height: 14px;
   background-color: var(--text-color);
@@ -214,25 +212,25 @@ video {
   transform: translateX(-50%);
 }
 
-/* Timeline items */
+
 .timeline-item {
   position: relative;
-  width: calc(50% - 30px); /* Adjust width to fit between items */
+  width: calc(50% - 30px); 
   box-sizing: border-box;
   padding: 10px;
   margin-bottom: -50px;
 }
 
 .timeline-item:nth-child(odd) {
-  align-self: flex-start; /* Left side */
-  text-align: right; /* Right align text */
-  margin-right: 60px; /* Space for the timeline */
+  align-self: flex-start; 
+  text-align: right;
+  margin-right: 60px;
 }
 
 .timeline-item:nth-child(even) {
-  align-self: flex-end; /* Right side */
-  text-align: left; /* Left align text */
-  margin-left: 60px; /* Space for the timeline */
+  align-self: flex-end;
+  text-align: left;
+  margin-left: 60px; 
 }
 
 .timeline-content {
@@ -244,52 +242,52 @@ video {
 }
 
 .timeline-content h3 {
-  font-size: 1.5rem; /* Larger title */
-  font-weight: bold; /* Bold title */
-  margin-bottom: 10px; /* Space below the title */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px; 
 }
 
 .timeline-item {
-  opacity: 0; /* Initially hidden */
-  transform: translateY(30px); /* Start slightly below the final position */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+  opacity: 0; 
+  transform: translateY(30px); 
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
 }
 
 .timeline-item.visible {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Move to the final position */
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 768px) {
   .timeline {
-    padding: 0; /* Remove extra padding */
+    padding: 0;
   }
 
   .timeline-branch {
-    display: none; /* Hide the branch line on mobile */
+    display: none;
   }
 
   .timeline-item {
-    width: 100%; /* Full width for mobile */
-    margin-bottom: 20px; /* Space between items */
-    text-align: left; /* Left align text */
-    padding: 15px; /* Padding for mobile */
+    width: 100%; 
+    margin-bottom: 20px; 
+    text-align: left; 
+    padding: 15px;
   }
 
   .timeline-item:nth-child(odd),
   .timeline-item:nth-child(even) {
-    align-self: stretch; /* Stretch to full width */
-    margin: 0; /* Remove side margins */
+    align-self: stretch; 
+    margin: 0; 
     text-align: left;
   }
 
   .timeline-dot {
-    left: 15px; /* Adjust position of the dot for mobile */
+    left: 15px; 
     transform: none;
   }
 
   .timeline-content {
-    margin: 0; /* Remove margin for mobile */
+    margin: 0; 
   }
 }
