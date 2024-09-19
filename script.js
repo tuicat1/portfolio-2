@@ -8,10 +8,10 @@ darkModeToggle.addEventListener("click", function () {
 
   // Toggle between sun and moon icons
   if (document.body.classList.contains("dark-mode")) {
-    darkModeIcon.textContent = "🌙"; // Moon icon
+    darkModeIcon.textContent = "🌙"; 
     localStorage.setItem("theme", "dark");
   } else {
-    darkModeIcon.textContent = "☀️"; // Sun icon
+    darkModeIcon.textContent = "☀️"; 
     localStorage.setItem("theme", "light");
   }
 });
@@ -20,9 +20,9 @@ darkModeToggle.addEventListener("click", function () {
 window.onload = function () {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
-    darkModeIcon.textContent = "🌙"; // Set icon to moon on load
+    darkModeIcon.textContent = "🌙"; 
   } else {
-    darkModeIcon.textContent = "☀️"; // Set icon to sun on load
+    darkModeIcon.textContent = "☀️"; 
   }
 };
 
@@ -41,12 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
         } else {
-          entry.target.classList.remove("visible"); // Remove class when out of view
+          entry.target.classList.remove("visible");
         }
       });
     },
     {
-      threshold: 0.1, // Trigger when 10% of the item is visible
+      threshold: 0.1, 
     }
   );
 
