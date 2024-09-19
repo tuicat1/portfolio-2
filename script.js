@@ -59,14 +59,14 @@ let text = document.querySelector(".multiText");
 
 let writeText = () => {
   setTimeout(() => {
-    text.textContent = "Web Developer";
-  }, 500);
+    text.textContent = "Web App Developer";
+  }, 200);
   setTimeout(() => {
     text.textContent = "Front End Developer";
-  }, 4500);
+  }, 4000);
   setTimeout(() => {
     text.textContent = "Back End Developer";
-  }, 8500);
+  }, 8000);
 };
 
 writeText();
