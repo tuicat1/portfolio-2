@@ -11,6 +11,7 @@
   --link-color: #0066cc;
   --icon-light: #000;
   --icon-dark: #fff;
+  --animated-color: #1e90ff;
 }
 
 body.dark-mode {
@@ -19,6 +20,7 @@ body.dark-mode {
   --link-color: #1e90ff;
   --icon-light: #fff;
   --icon-dark: #000;
+  --animated-color: #1e90ff;
 }
 
 body {
@@ -49,7 +51,7 @@ h1 {
 }
 
 .landing-page .content h3 span{
-  color: blue;
+  color: var(--animated-color);
   position: relative;
 } 
 
