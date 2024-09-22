@@ -50,12 +50,12 @@ h1 {
   font-size: 3rem;
 }
 
-.landing-page .content h3 span{
+.landing-page .content h2 span{
   color: var(--animated-color);
   position: relative;
 } 
 
-.landing-page .content h3 span::before{
+.landing-page .content h2 span::before{
   position: absolute;
   content: "";
   top: 0;

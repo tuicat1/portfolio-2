@@ -1,5 +1,3 @@
-// script.js
-
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 const darkModeIcon = document.getElementById("dark-mode-icon");
 
@@ -32,6 +30,20 @@ function scrollToMyJourney() {
   journeySection.scrollIntoView({ behavior: "smooth" });
 }
 
+// Optimize the multiText writing function
+let text = document.querySelector(".multiText");
+const texts = ["Web App Developer", "Front End Developer", "Back End Developer"];
+let index = 0;
+
+const writeText = () => {
+  text.textContent = texts[index];
+  index = (index + 1) % texts.length;
+};
+
+writeText();
+setInterval(writeText, 4000);
+
+// Use IntersectionObserver for timeline items
 document.addEventListener("DOMContentLoaded", function () {
   const timelineItems = document.querySelectorAll(".timeline-item");
 
@@ -54,21 +66,3 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(item);
   });
 });
-
-let text = document.querySelector(".multiText");
-
-let writeText = () => {
-  setTimeout(() => {
-    text.textContent = "Web App Developer";
-  }, 200);
-  setTimeout(() => {
-    text.textContent = "Front End Developer";
-  }, 4000);
-  setTimeout(() => {
-    text.textContent = "Back End Developer";
-  }, 8000);
-};
-
-writeText();
-
-setInterval(writeText, 12000);
